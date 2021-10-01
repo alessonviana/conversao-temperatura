@@ -1,10 +1,11 @@
-# 
+# conversao-temperatura Deployment
 apiVersion: apps/v1
 kind: apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: conversao-temperatura
 spec:
+  replicas: 10
   selector:
     matchLabels:
       app: conversao-temperatura
@@ -33,5 +34,3 @@ spec:
   - port: 8080
     targetPort: 8080
   type: ClusterIP
-
-
